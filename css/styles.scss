@@ -13,6 +13,10 @@ $carousel-item-height: 300px;
 	padding: $pad-up-dn $pad-left-right;
 }
 
+.navbar-text {
+	cursor: pointer;
+}
+
 .row-header {
 	@include zero-margin(0px, 0px);
 }
@@ -75,4 +79,5 @@ body {
 	right: 0px;
 	position: absolute;
 	bottom: 0px;
+	z-index: 10;
 }

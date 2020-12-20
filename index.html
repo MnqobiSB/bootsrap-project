@@ -37,7 +37,7 @@
                     <li class="nav-item"><a href="./contactus.html" class="nav-link"><span class="fa fa-address-card"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="toggle-login-modal">
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -177,11 +177,7 @@
                     <img src="img/logo.png" alt="logo" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <button
-                        class="btn btn-sm btn-warning btn-block"
-                        data-toggle="modal" 
-                        data-target="#reserve"
-                    >
+                    <button id="toggle-reserve-modal" class="btn btn-sm btn-warning btn-block">
                         Reserve Table
                     </button>
                 </div>
@@ -356,6 +352,7 @@
 
     <script>
         $(document).ready(function() {
+            // Carousel code
             $('#mycarousel').carousel({ interval: 2000 });
             $('#carouselButton').click(function() {
                 if ($('#carouselButton').children('span').hasClass('fa-pause')) {
@@ -368,6 +365,16 @@
                     $($('#carouselButton').children('span').removeClass('fa-play'));
                     $($('#carouselButton').children('span').addClass('fa-pause'));   
                 }
+            });
+
+            // Reserve modal code
+            $('#toggle-reserve-modal').click(function() {
+                $('#reserve').modal('show');
+            });
+
+            // Login modal code
+            $('#toggle-login-modal').click(function() {
+                $('#loginModal').modal('show');
             });
         });
     </script>
